@@ -5,10 +5,17 @@ import Header from './Componants/Header/Header';
 import Home from './Componants/Home/Home';
 import About from './Componants/About/About';
 import NotFound from './NotFound/NotFound';
+import Footer from './Componants/Footer/Footer';
+import ServiceDetails from './Componants/Home/ServiceDetails/ServiceDetails';
+import Login from './Componants/Login/Login';
+import Register from './Componants/Register/Register';
+import AuthProvider from './Componants/Context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div >
+    <div>
+        <AuthProvider>
      <Router>
       <Header></Header>
        <Switch>
@@ -18,14 +25,29 @@ function App() {
          <Route exact path="/Home">
            <Home></Home>
          </Route>
+         <PrivateRoute exact path="/Service/:serviceId">
+           <ServiceDetails></ServiceDetails>
+         </PrivateRoute>
          <Route exact path="/About">
            <About></About>
          </Route>
+         <Route exact path="/Login">
+           <Login></Login>
+         </Route>
+         <Route exact path="/Register">
+         <Register></Register>
+         </Route>
+         
+           
+        
          <Route path="/*">
            <NotFound></NotFound>
          </Route>
+         
        </Switch>
+       <Footer></Footer>
      </Router>
+   </AuthProvider>
     </div>
   );
 }
