@@ -1,0 +1,13 @@
+.google-btn{
+    border: 2px solid tomato;
+    padding: 10px 17px;
+}
+.google-btn:hover{
+    background-color: rgb(248, 233, 231);
+    box-shadow:5px 5px 25px rgb(243, 204, 190) ;
+    transition: .8s;
+}
+.fa-google{
+    font-size: 25px;
+    color:rgb(0, 89, 255);
+}

@@ -42,8 +42,7 @@ function App() {
          <Register></Register>
          </Route>
          
-           
-        
+          
          <Route path="/*">
            <NotFound></NotFound>
          </Route>

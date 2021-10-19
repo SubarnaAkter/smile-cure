@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-
+import './Service.css';
 const Service = (props) => {
     const {name,details,img,id}=props.service;
 
@@ -14,7 +14,7 @@ const Service = (props) => {
     return (
         <div>
             <Col>
-                <Card className="pb-3 shadow-lg">
+                <Card className="pb-3 service-card">
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title className="text-center fw-bold">{name}</Card.Title>
