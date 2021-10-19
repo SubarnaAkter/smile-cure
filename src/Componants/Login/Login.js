@@ -1,13 +1,22 @@
 import React from 'react';
 
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link ,useLocation,useHistory} from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 
 const Login = () => {
     const { signInWithUsingGoogle , processLogin } = useAuth();
+    const location=useLocation();
+    const history=useHistory();
+    const redirects_uri=location.state?.from || './Home';
 
+    const handleSignInWithGoogle=()=>{
+        signInWithUsingGoogle ()
+        .then(() => {
+          history.push(redirects_uri);
+        })
+    }
     const { register, handleSubmit,  formState: { errors } } = useForm();
     const onSubmit = data => {
      const   {email,password}=data;
@@ -36,7 +45,7 @@ const Login = () => {
             <p>New to Smile Cure?  <Link to="/Register">Create an account</Link></p>
 
             <div>------------or-----------</div>
-            <button onClick={signInWithUsingGoogle}>Google Sign in</button>
+            <button onClick={handleSignInWithGoogle}>Google Sign in</button>
         </div>
     );
 };

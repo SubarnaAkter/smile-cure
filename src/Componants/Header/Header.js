@@ -32,10 +32,10 @@ const Header = () => {
                                 Appointment
                             </Nav.Link>
                             {
-                            user.displayName && <span style={{ color: 'white' }}>  {user.displayName} </span>
+                            user.email && <span style={{ color: 'white' }}>  {user.displayName} </span>
                         }
                             {
-                                user.displayName ? <button onClick={logOut}>  Log out</button> : <Nav.Link as={Link} to="/Login">
+                                user.email ? <button onClick={logOut}>  Log out</button> : <Nav.Link as={Link} to="/Login">
                                     Login/Sign up
                                 </Nav.Link>
                           }
