@@ -68,17 +68,17 @@ const Home = () => {
 
             {/* ------------------------------------------------ */}
 
-            <div>
-                <div className="row   g-4 m-5 ">
-                    <div className="col-md-8 col-sm-1 my-5">
+            <div className="my-5">
+                <div className="row  care-style g-4 m-5  ">
+                    <div className="col-md-8 col-sm-1 my-3">
                         <p><i>7 Star Care & Protection</i></p>
-                        <h1>We love your loved ones
+                        <h1 className="fw-bold">We love your loved ones
                         </h1>
                         <p>Proactively revolutionize granular customer service after pandemic internal or "organic" sources. Distinctively impact proactive human capital rather than client-centered benefits.</p>
                         <div className="row row-cols-1 row-cols-md-2 g-4 my-5">
                             <div className="col d-flex">
                                 
-                            <i className="fas fa-user-shield fs-1 m-2"></i>
+                            <i className="fas fa-user-shield fs-1 me-2"></i>
                             <div>
                             <h3>100% Safe & Trused</h3>
                                  <p>You can rely on our 5-star rated South San Francisco dentists & specialists, same day emergency dentistry and a 100% satisfaction guarantee.</p>
@@ -87,7 +87,7 @@ const Home = () => {
                              
                             </div>
                             <div className="col d-flex">
-                            <i class="fas fa-user-md fs-1 m-2"></i>
+                            <i className="fas fa-user-md fs-1 me-2"></i>
                                 <div>
                                 <h3>Specialist Surgery</h3>
                                  <p>Smile cure center  is the only JCI Accredited 425-bed multi-disciplinary super-specialty tertiary care hospital in Bangladesh.
@@ -96,14 +96,14 @@ const Home = () => {
                                
                             </div>
                             <div className="col d-flex">
-                            <i class="fas fa-hand-holding-medical"></i>dfdfg
+                            <i className="fas fa-user-clock fs-1 me-2"></i>
                                 <div>
                                 <h3>24/7 take care staff</h3>
                                  <p>Trusted 24 hour home care service for seniors with Nurse Next Door. Hire compassionate and reliable elderly care providers. Ask us how we can help today.</p>
                                 </div>
                             </div>
                             <div className="col d-flex"> 
-                            <i class="fas fa-capsules fs-1 m-2"></i>
+                            <i className="fas fa-capsules fs-1 me-2"></i>
                                 <div>
                                 <h3>Medicine service</h3>
                                  <p>Dentists and oral surgeons are often appointed to a hospital's medical staff to provide dental services to emergency department patients</p>
