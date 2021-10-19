@@ -1,0 +1,11 @@
+.service-img{
+    width: 400px;
+    height: 250px;
+}
+.all-services{
+    background-image: url("https://penndentalmedicine.org/wp-content/uploads/2016/08/PennSmiles-Mobile-Dental-Clinic--e1472182752312.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
