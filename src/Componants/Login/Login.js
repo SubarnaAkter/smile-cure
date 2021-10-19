@@ -9,7 +9,7 @@ const Login = () => {
     const { signInWithUsingGoogle, processLogin } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirects_uri = location.state?.from || './Home';
+    const redirects_uri = location.state?.from || './ServiceDetails';
 
     const handleSignInWithGoogle = () => {
         signInWithUsingGoogle()

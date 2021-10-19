@@ -52,7 +52,7 @@ function App() {
          </PrivateRoute>
          
           
-         <Route path="/*">
+         <Route path="*">
            <NotFound></NotFound>
          </Route>
          

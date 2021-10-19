@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-    const { signInWithUsingGoogle, createNew } = useAuth();
+    const { signInWithUsingGoogle, createNew ,updateUserInfo} = useAuth();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const { userName, email, password } = data;
         createNew(email, password, userName);
+        updateUserInfo(userName);
     }
 
 
