@@ -7,8 +7,9 @@ const Contact = () => {
 
             <h1 className="text-center my-5">Contact us</h1>
 
-            <div className="row container my-5">
-                <div className="col ms-5">
+            <div className="row container my-5 pt-5">
+                <div className="col ms-5 mt-5 pt-5">
+                    <h1>Send us a Message</h1>
                     <div>
                         <Form.Group className="mb-3" controlId="formGroupPassword">
                             <Form.Label>Name</Form.Label>

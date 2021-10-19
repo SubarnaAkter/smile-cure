@@ -14,6 +14,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Services from './Componants/Services/Services';
 import Appointment from './Componants/Appointment/Appointment';
 import Contact from './Componants/Contact/Contact';
+import Dentists from './Componants/Dentists/Dentists';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
          </Route>
          <Route exact path="/Register">
          <Register></Register>
+         </Route>
+         <Route exact path="/Dentists">
+         <Dentists></Dentists>
          </Route>
          <Route exact path="/Contact">
          <Contact></Contact>

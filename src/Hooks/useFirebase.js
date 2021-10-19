@@ -26,6 +26,7 @@ const useFirebase = () => {
 
         const user = result.user;
         setUser(user)
+        console.log(user)
       })
       .catch((error) => {
         setError(error.message);
@@ -47,17 +48,17 @@ const useFirebase = () => {
 
   }
  
-  const updateUserInfo=(userName)=>{
-    updateProfile(auth.currentUser, {
-      displayName: userName})
-      console.log(userName)
-      .then((result) => {
-        console.log(result);
-       })
-       .catch((error) => {
-         setError(error.message);
-       });
-  }
+  // const updateUserInfo=(userName)=>{
+  //   updateProfile(auth.currentUser, {
+  //     displayName: userName})
+  //     console.log(userName)
+  //     .then((result) => {
+  //       console.log(result);
+  //      })
+  //      .catch((error) => {
+  //        setError(error.message);
+  //      });
+  // }
 
 
 
@@ -82,7 +83,7 @@ const useFirebase = () => {
     logOut,
     processLogin,
     createNew,
-    updateUserInfo,
+   
   }
 
 }

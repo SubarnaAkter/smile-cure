@@ -15,7 +15,7 @@ const Services = () => {
                 {
                     services.map(service => 
                        
-                 <Col >
+                 <Col key={service.id}>
                 <Card className="shadow-lg  flex-md-row ">
                     <Card.Img variant="top" className="service-img my-auto" src={service.img} />
                     <Card.Body>

@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footer-container">
-            <h1 className="ms-5 pt-5 footer-title">Smile Cure</h1>
+            <h1 className="ms-5 pt-5 footer-title"> <i className="fas fa-tooth"></i>  Smile Cure Dental Care</h1>
             <Row className="footer-body p-5 g-5 mx-auto" xs={1} md={4}  >
                 <Col className="footer-item ">
                     <h3>About Us</h3>
@@ -36,6 +36,8 @@ const Footer = () => {
                 </Col>
                 <Col className="footer-item">
                 <h3>Social Media</h3>
+                <button className="fs-3"><i className="fab fa-facebook"></i></button>
+                <button><i className="fab fa-instagram"></i></button>
                 </Col>
             </Row>
             <p className="text-center pt-5">Copyright &copy; Smile Cure ,2021</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link,  } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './Header.css';
@@ -10,21 +10,16 @@ const Header = () => {
             
             <Navbar className="nav-menu" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand >Smile Cure</Navbar.Brand>
+                    <Navbar.Brand ><i className="fas fa-tooth"></i> <span className="footer-title fw-bold">Smile Cure Dental Care</span></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto ">
                             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/About">About</Nav.Link>
                             <Nav.Link as={Link} to="/Services">Services</Nav.Link>
+                            <Nav.Link as={Link} to="/Dentists">Dentists</Nav.Link>
 
-                            {/* <NavDropdown title="Features" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Dentists</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Patients & visitors</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Our Team</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Research & innovation</NavDropdown.Item>
-                            </NavDropdown> */}
+                           
                             <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
                         </Nav>
                         <Nav>
