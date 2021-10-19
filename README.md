@@ -1,12 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Smile Cure Dental Care
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Smile Cure Dental Care](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+# Getting Started with Smile Cure Dental Care
+ * `Dentist can use this website`
+ * `Patient can see doctors List`
+ * `Can Place an appointment`
+ * `Can contact with doctor and staff`
+ * `Can friendly`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
