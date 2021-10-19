@@ -12,6 +12,8 @@ import Register from './Componants/Register/Register';
 import AuthProvider from './Componants/Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Services from './Componants/Services/Services';
+import Appointment from './Componants/Appointment/Appointment';
+import Contact from './Componants/Contact/Contact';
 
 function App() {
   return (
@@ -41,6 +43,13 @@ function App() {
          <Route exact path="/Register">
          <Register></Register>
          </Route>
+         <Route exact path="/Contact">
+         <Contact></Contact>
+         </Route>
+         
+         <PrivateRoute exact path="/Appointment">
+         <Appointment></Appointment>
+         </PrivateRoute>
          
           
          <Route path="/*">

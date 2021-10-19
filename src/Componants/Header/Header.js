@@ -7,6 +7,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
+            
             <Navbar className="nav-menu" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand >Smile Cure</Navbar.Brand>
@@ -17,18 +18,18 @@ const Header = () => {
                             <Nav.Link as={Link} to="/About">About</Nav.Link>
                             <Nav.Link as={Link} to="/Services">Services</Nav.Link>
 
-                            <NavDropdown title="Features" id="collasible-nav-dropdown">
+                            {/* <NavDropdown title="Features" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Dentists</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Patients & visitors</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Our Team</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Research & innovation</NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
                             <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
                         </Nav>
                         <Nav>
 
-                            <Nav.Link as={Link} to="/Appoinment">
+                            <Nav.Link as={Link} to="/Appointment">
                                 Appointment
                             </Nav.Link>
                             {

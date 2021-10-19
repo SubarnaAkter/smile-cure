@@ -46,7 +46,7 @@ const Login = () => {
                         {/* errors will return when field validation fails  */}
                         {errors.email && <span className="text-danger pb-2 mb-3">This field is required</span>} 
 
-                        <input  className= "button-regular rounded w-75 fw-bold mb-3" type="submit" /><br />
+                        <input  className= "button-regular rounded w-75 fw-bold mb-3" type="submit"  /><br />
                     </form>
                     <p>New to Smile Cure?  <Link to="/Register">Create an account</Link></p>
 
