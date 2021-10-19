@@ -1,6 +1,6 @@
 # Getting Started with Smile Cure Dental Care
 
-This project was bootstrapped with [Smile Cure Dental Care](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Smile Cure Dental Care](https://health-care-3591a.web.app/).
 
 ## Available Scripts
 
