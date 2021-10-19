@@ -21,7 +21,7 @@ const ServiceDetails = () => {
     return (
         <div>
              <Col>
-                <Card className="pb-3 shadow-lg">
+                <Card className="pb-3 w-75 shadow-lg">
                     <Card.Img variant="top" src={services.img} />
                     <Card.Body>
                         <Card.Title className="text-center fw-bold">{services.name}</Card.Title>

@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithUsingGoogle, processLogin } = useAuth();
+    const { signInWithUsingGoogle, processLogin ,error} = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirects_uri = location.state?.from || './Home';
