@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
 
@@ -27,35 +27,22 @@ const useFirebase = () => {
    return signInWithEmailAndPassword(auth, email, password);
       
   }
-  const createNew = (email, password,userName) => {
+  const createNew = (email, password) => {
     setIsLoading(true);
-    createUserWithEmailAndPassword(auth, email,password)
-      .then(result => {
-        const user = result.user;
-        user.displayName=userName;
-        setUser(user)
+     return createUserWithEmailAndPassword(auth, email,password);
+      
 
-        updateUserInfo(userName);
-
-      })
-      .catch(error => {
-        setError(error.message);
-      })
-      .finally(() => setIsLoading(false));
-
-  }
+      }
  
-  const updateUserInfo=(userName)=>{
-    updateProfile(auth.currentUser, {
-      displayName: userName})
-      .then((result) => {
-        setUser(result.user)
-       })
-       .catch((error) => {
-         setError(error.message);
-       });
+  // const updateUserInfo=(userName)=>{
+  //   updateProfile(auth.currentUser, {
+  //     displayName: userName})
+  //     .then((result) => {
+  //       setUser(result.user)
+  //      })
+      
 
-  }
+  // }
   
 
 
@@ -89,6 +76,7 @@ const useFirebase = () => {
     logOut,
     processLogin,
     createNew,
+
     
   }
 

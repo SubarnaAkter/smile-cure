@@ -27,9 +27,13 @@ const Header = () => {
                             <Nav.Link as={Link} to="/Appointment">
                                 Appointment
                             </Nav.Link>
-                            {
-                          user.displayName ||  user.email ? <span className="p-2 text-white">  {user.displayName} </span>:''
+                           <span className="p-2 text-white">
+                           {
+                        //   user.displayName ||  user.email ? <span className="p-2 text-white">  {user.displayName} </span>:''
+
+                       user.email ?  user.displayName ? user.displayName : user.email.substring(0, user.email.lastIndexOf("@")) : ""
                         }
+                           </span>
                             {
                               user.displayName ||  user.email ? <button onClick={logOut}>  Log out</button> : <Nav.Link as={Link} to="/Login">
                                     Login/Sign up

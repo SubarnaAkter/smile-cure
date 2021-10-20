@@ -1,17 +1,36 @@
 
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
 
+import useAuth from '../../Hooks/useAuth';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useState } from 'react';
 const Register = () => {
-    const { signInWithUsingGoogle, createNew,error} = useAuth();
-   
+    const { signInWithUsingGoogle, createNew,setIsLoading} = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const [error, setError] = useState('');
+    const redirects_uri = location.state?.from || './Home';
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const { userName, email, password } = data;
-        createNew(email, password, userName);
+      //  createNew(email, password);
+        handleEmailpass(email, password)
        
-       
+    }
+
+    const handleEmailpass=(email, password)=>{
+        createNew(email, password)
+        .then(()=>{
+         history.push(redirects_uri);
+        })
+        .catch(error => {
+         setError(error.message);
+         console.log(error.message)
+       })
+       .finally(() => setIsLoading(false));
+     
+
+
     }
 
 
