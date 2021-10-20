@@ -7,7 +7,7 @@ const Dentists = () => {
     const [doctors] = useDoctors();
     return (
         <div>
-              <img className="w-100 " style={{ height: "500px" }} src="https://thumbs.dreamstime.com/b/group-dentists-standing-their-office-looking-camera-uniform-men-women-team-dental-clinic-98561059.jpg" alt="" />
+              <img className="w-100 " style={{ height: "500px" }} src="https://img.freepik.com/free-photo/doctor-crossing-arms-while-holding-stethoscope-white-coat_176474-8491.jpg" alt="" />
             <div className="container my-5">
 
                 {/* Services Section */}
