@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithUsingGoogle, processLogin} = useAuth();
+    const { signInWithUsingGoogle, processLogin,setIsLoading} = useAuth();
     const [error, setError] = useState('');
     const location = useLocation();
     const history = useHistory();
@@ -17,6 +17,7 @@ const Login = () => {
             .then(() => {
                 history.push(redirects_uri);
             })
+            .finally(() => setIsLoading(false));
     }
     const handleLoginWithEmailPass=(email, password)=>{
         processLogin(email, password)
@@ -27,6 +28,7 @@ const Login = () => {
         setError(error.message);
         console.log(error.message)
       })
+      .finally(() => setIsLoading(false));
     }
 
     
@@ -58,7 +60,7 @@ const Login = () => {
                         {/* include validation with required or other standard HTML validation rules */}
                         <input type="password" className="w-75 my-2 p-2"  placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
                         {/* errors will return when field validation fails  */}
-                        {errors.email && <span className="text-danger pb-2 mb-3">This field is required</span>} <br />
+                        {errors.email && <span className="text-danger pb-2 mb-3">{error}</span>} <br />
 
                         <input  className= "button-regular rounded w-75 fw-bold mb-3" type="submit"  /><br />
                     </form>
