@@ -12,25 +12,18 @@ const useFirebase = () => {
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
-
+           
   // google sign in 
   const signInWithUsingGoogle = () => {
     return  signInWithPopup(auth, provider);
+    
 
   }
 
 
-  const processLogin = (email, pass) => {
-    signInWithEmailAndPassword(auth, email, pass)
-      .then((result) => {
-
-        const user = result.user;
-        setUser(user)
-        console.log(user)
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+  const processLogin = (email, password) => {
+   return signInWithEmailAndPassword(auth, email, password);
+      
   }
   const createNew = (email, password,userName) => {
     createUserWithEmailAndPassword(auth, email,password)
@@ -39,7 +32,7 @@ const useFirebase = () => {
         user.displayName=userName;
         setUser(user)
 
-        console.log(user);
+        updateUserInfo(userName);
 
       })
       .catch(error => {
@@ -48,18 +41,17 @@ const useFirebase = () => {
 
   }
  
-  // const updateUserInfo=(userName)=>{
-  //   updateProfile(auth.currentUser, {
-  //     displayName: userName})
-  //     console.log(userName)
-  //     .then((result) => {
-  //       console.log(result);
-  //      })
-  //      .catch((error) => {
-  //        setError(error.message);
-  //      });
-  // }
-
+  const updateUserInfo=(userName)=>{
+    updateProfile(auth.currentUser, {
+      displayName: userName})
+      .then((result) => {
+        setUser(result.user)
+       })
+       .catch((error) => {
+         setError(error.message);
+       });
+  }
+  
 
 
   const logOut = () => {
@@ -79,7 +71,7 @@ const useFirebase = () => {
 
   return {
     user,
-    error,
+   
     signInWithUsingGoogle ,
     logOut,
     processLogin,

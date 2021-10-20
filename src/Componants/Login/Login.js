@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useHistory } from 'react-router-dom';
@@ -6,7 +6,8 @@ import useAuth from '../../Hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithUsingGoogle, processLogin ,error} = useAuth();
+    const { signInWithUsingGoogle, processLogin} = useAuth();
+    const [error, setError] = useState('');
     const location = useLocation();
     const history = useHistory();
     const redirects_uri = location.state?.from || './Home';
@@ -17,10 +18,23 @@ const Login = () => {
                 history.push(redirects_uri);
             })
     }
+    const handleLoginWithEmailPass=(email, password)=>{
+        processLogin(email, password)
+       .then(()=>{
+        history.push(redirects_uri);
+       })
+       .catch(error => {
+        setError(error.message);
+        console.log(error.message)
+      })
+    }
+
+    
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const { email, password } = data;
         processLogin(email, password);
+        handleLoginWithEmailPass(email, password)
     }
 
 
