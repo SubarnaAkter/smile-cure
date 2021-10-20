@@ -26,11 +26,11 @@ const Register = () => {
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <input className="w-75 my-2 py-2" placeholder="Enter your Name" {...register("userName")} /> <br />
-                        <input  className="w-75 my-2 py-2" placeholder="Enter your Email" {...register("email", { required: true })} /> <br />
+                        <input type="text" className="w-75 my-2 p-2" placeholder="Enter your Name" {...register("userName")} /> <br />
+                        <input type="email" className="w-75 my-2 p-2" placeholder="Enter your Email" {...register("email", { required: true })} /> <br />
 
                         {/* include validation with required or other standard HTML validation rules */}
-                        <input className="w-75 my-2 py-2" placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
+                        <input type="password" className="w-75 my-2 p-2 " placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
                         {/* errors will return when field validation fails  */}
                         {errors.email && <span  className="text-danger pb-2 mb-3">This field is required</span>}
 
