@@ -8,7 +8,7 @@ const About = () => {
 
             <div className="container w-50 mx-auto m-5 text-center">
                 <h1>Our Mission</h1>
-                <p>Here at Smile Cure Dental Care we strive to create a comfortable, safe and relaxing environment for you and your family’s dental needs.
+                <p className="text-start">Here at Smile Cure Dental Care we strive to create a comfortable, safe and relaxing environment for you and your family’s dental needs.
 
                     We believe in prevention, education and implementation as the keys to long term dental and oral health.
 

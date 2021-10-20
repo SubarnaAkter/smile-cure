@@ -17,6 +17,10 @@ const Login = () => {
             .then(() => {
                 history.push(redirects_uri);
             })
+            .catch(error => {
+                setError(error.message);
+                console.log(error.message)
+              })
             .finally(() => setIsLoading(false));
     }
     const handleLoginWithEmailPass=(email, password)=>{
@@ -58,10 +62,10 @@ const Login = () => {
                         <input type="email" className="w-75 my-2 p-2" placeholder="Enter your Email" {...register("email", { required: true })} /> <br />
 
                         {/* include validation with required or other standard HTML validation rules */}
-                        <input type="password" className="w-75 my-2 p-2"  placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
+                        <input type="password" className="w-75 mt-2 p-2"  placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
                         {/* errors will return when field validation fails  */}
-                        {errors.email && <span className="text-danger pb-2 mb-3">{error}</span>} <br />
-
+                        {errors.email && <span className="text-danger pb-2 mb-3">This field is required</span>} <br />
+                         <p className="text-danger">{error}</p>
                         <input  className= "button-regular rounded w-75 fw-bold mb-3" type="submit"  /><br />
                     </form>
                     <p>New to Smile Cure?  <Link to="/Register">Create an account</Link></p>

@@ -33,13 +33,13 @@ const Contact = () => {
                 </div>
                 <div className="col m-3 ms-5">
                     <h1>We are here for help you! Arrange a meeting. </h1>
-                        <p>Holisticly engage inexpensive architectures via high-quality solutions. Efficiently implement synergistic applications vis-a-vis best-of-breed ecommerce onotonectally enable client-based portals
+                        <p>Holisticly engage inexpensive architectures via high-quality solutions. Efficiently implement synergistic applications vis-a-vis best-of-breed ecommerce onotonectally enable client-based portals</p>
                         <h4 className="my-4">Opening Hours</h4>
                     <p>
                         Mon Tue Wed Fri 8:30AM-5:30PM </p>
                     <p>Thurs 8:30 AM-7:00 PM</p>
                     <p> Sat: 8:30 AM-12:30 PM</p>
-</p>
+
                    <h3>Address</h3>
                    <p>Smile cure Dental Care
                         <br />
@@ -49,7 +49,8 @@ const Contact = () => {
                         Dhaka,Bangladesh</p>
 
                         <h3>Supports</h3>
-                        <h1 className="text-info">0171233436</h1>
+                        <h4 >Mobile: +88 0171233436</h4>
+                        <h4>Email: dentalcare111@info.com</h4>
                 </div>
             </div>
 

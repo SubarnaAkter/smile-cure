@@ -1,11 +1,11 @@
-import React from 'react';
+
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-    const { signInWithUsingGoogle, createNew} = useAuth();
-
+    const { signInWithUsingGoogle, createNew,error} = useAuth();
+   
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const { userName, email, password } = data;
@@ -32,8 +32,10 @@ const Register = () => {
                         {/* include validation with required or other standard HTML validation rules */}
                         <input type="password" className="w-75 my-2 p-2 " placeholder="Enter your Password" {...register("password", { required: true })} /> <br />
                         {/* errors will return when field validation fails  */}
-                        {errors.email && <span  className="text-danger pb-2 mb-3">This field is required</span>}
+                        {errors.email && <span  className="text-danger pb-2 mb-3"></span>}
+                          <p className="text-danger">{error}</p>
 
+                          {/* ---------------------------- */}
                         <input className= "button-regular rounded w-75 fw-bold mb-3" type="submit" />
                     </form>
                     <p>Already registered?  <Link to="/Login">Login</Link></p>

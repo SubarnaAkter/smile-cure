@@ -82,6 +82,7 @@ const useFirebase = () => {
 
   return {
     user,
+    error,
     isLoading,
     setIsLoading,
     signInWithUsingGoogle ,

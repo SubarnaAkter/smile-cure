@@ -10,7 +10,7 @@ const Header = () => {
             
             <Navbar className="nav-menu" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand ><i className="fas fa-tooth"></i> <span className="footer-title fw-bold">Smile Cure Dental Care</span></Navbar.Brand>
+                    <Navbar.Brand ><i className="fas fa-tooth "></i> <span className=" fw-bold">Smile Cure Dental Care</span></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto ">

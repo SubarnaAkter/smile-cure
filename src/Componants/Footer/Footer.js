@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import './Footer.css';
 const Footer = () => {
     return (
-        <div className="footer-container">
+        <div className="footer-container mb-0">
             <h1 className="ms-5 pt-5 footer-title"> <i className="fas fa-tooth"></i>  Smile Cure Dental Care</h1>
             <Row className="footer-body p-5 g-5 mx-auto" xs={1} md={4}  >
                 <Col className="footer-item ">
@@ -36,11 +36,15 @@ const Footer = () => {
                 </Col>
                 <Col className="footer-item">
                 <h3>Social Media</h3>
-                <button className="fs-3"><i className="fab fa-facebook"></i></button>
-                <button><i className="fab fa-instagram"></i></button>
+                <button className="fs-4"><i className="fab fa-facebook"></i></button>
+                <button className="fs-4 mx-1"><i className="fab fa-instagram"></i></button>
+                <button className="fs-4"> <i className="fab fa-twitter-square"></i></button>
+                <button className="fs-4 ms-1">  <i className="fab fa-google-plus-g"></i></button>
+               
+               
                 </Col>
             </Row>
-            <p className="text-center pt-5">Copyright &copy; Smile Cure ,2021</p>
+            <p className="text-center py-3 fs-5 mb-0 border-top">Copyright &copy; Smile Cure ,2021</p>
         </div>
     );
 };
