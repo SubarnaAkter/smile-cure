@@ -31,7 +31,7 @@ const Header = () => {
                            {
                         //   user.displayName ||  user.email ? <span className="p-2 text-white">  {user.displayName} </span>:''
 
-                       user.email ?  user.displayName ? user.displayName : user.email.substring(0, user.email.lastIndexOf("@")) : ""
+                        user.displayName ||  user.email ?  user.displayName ? user.displayName : user.email.substring(0, user.email.lastIndexOf("@")) : ""
                         }
                            </span>
                             {
